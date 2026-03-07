@@ -26,6 +26,15 @@ enum AgentStates {
     idle = "idle",
 }
 
+const eventNames = {
+    0: "follow",
+    1: "attack",
+    2: "destroy",
+    3: "press",
+    4: "observe",
+    5: "idle",
+}
+
 const stateNames = {
     follow: "ついせきモード",
     attack: "こうげきモード",
@@ -47,10 +56,11 @@ namespace エージェント {
     //% block
     export function エージェントをつぎのモードにする(state: AgentStates):void {
         const eventId: string = `edu:${state}`;
-        const modeName: string = stateNames[state]
+        const modeName: string = stateNames[state];
 
-        player.say(`§cエージェントのモードをきりかえました：${state}`);
-        player.execute(`event entity @c ${modeName}`);
+        player.say(`state: ${state}`);
+        player.say(`§cエージェントのモードをきりかえました：${modeName}`);
+        player.execute(`event entity @c ${eventId}`);
     }
 }
 
