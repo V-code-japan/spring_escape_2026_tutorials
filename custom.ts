@@ -32,7 +32,10 @@ enum AgentStates {
 
 //% weight=100 color=#0fbc11 icon=""
 namespace エージェント {
-
+    /** 
+     * @param states Agent State, eg: follow
+     */
+    //% block
     export function エージェントをつぎのモードにする(states: AgentStates):void {
         const eventId: string = `edu:${states}`;
 
