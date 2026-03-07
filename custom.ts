@@ -39,6 +39,7 @@ namespace エージェント {
     export function エージェントをつぎのモードにする(states: AgentStates):void {
         const eventId: string = `edu:${states}`;
 
+        player.say(`§cエージェントのモードをきりかえました：${states}`);
         player.execute(`event entity @c ${eventId}`);
     }
 }
