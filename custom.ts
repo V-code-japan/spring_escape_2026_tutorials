@@ -13,17 +13,26 @@
 
 enum AgentStates {
     //% block="ついせきモード"
-    follow,
+    follow = "follow",
     //% block="こうげきモード"
-    attack,
+    attack = "attack",
     //% block="スポナーはかいモード"
-    destroy,
+    destroy = "destroy",
     //% block="ボタンモード"
-    press,
+    press = "press",
     //% block="カメラモード"
-    observe,
+    observe = "observe",
     //% block="たいきモード"
-    idle,
+    idle = "idle",
+}
+
+const stateNames = {
+    follow: "ついせきモード",
+    attack: "こうげきモード",
+    destroy: "スポナーはかいモード",
+    press: "ボタンモード",
+    observe: "カメラモード",
+    idle: "たいきモード",
 }
 
 /**
@@ -33,14 +42,15 @@ enum AgentStates {
 //% weight=100 color=#0fbc11 icon=""
 namespace エージェント {
     /** 
-     * @param states Agent State, eg: follow
+     * @param state Agent State, eg: follow
      */
     //% block
-    export function エージェントをつぎのモードにする(states: AgentStates):void {
-        const eventId: string = `edu:${states}`;
+    export function エージェントをつぎのモードにする(state: AgentStates):void {
+        const eventId: string = `edu:${state}`;
+        const modeName: string = stateNames[state]
 
-        player.say(`§cエージェントのモードをきりかえました：${states}`);
-        player.execute(`event entity @c ${eventId}`);
+        player.say(`§cエージェントのモードをきりかえました：${state}`);
+        player.execute(`event entity @c ${modeName}`);
     }
 }
 
