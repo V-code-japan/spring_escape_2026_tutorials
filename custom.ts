@@ -11,9 +11,35 @@
 //     Two
 // }
 
+enum AgentStates {
+    //% block="ついせきモード"
+    follow,
+    //% block="こうげきモード"
+    attack,
+    //% block="スポナーはかいモード"
+    destroy,
+    //% block="ボタンモード"
+    press,
+    //% block="カメラモード"
+    observe,
+    //% block="たいきモード"
+    idle,
+}
+
 /**
  * Custom blocks
  */
+
+//% weight=100 color=#0fbc11 icon=""
+namespace エージェント {
+
+    export function エージェントをつぎのモードにする(states: AgentStates):void {
+        const eventId: string = `edu:${states}`;
+
+        player.execute(`event entity @c ${eventId}`);
+    }
+}
+
 //% weight=100 color=#0fbc11 icon=""
 // namespace custom {
 //     /**
