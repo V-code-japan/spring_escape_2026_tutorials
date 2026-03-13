@@ -18,8 +18,6 @@ enum AgentStates {
     attack = 1,
     //% block="スポナーはかいモード"
     destroy = 2,
-    //% block="ボタンモード"
-    press = 3,
     //% block="カメラモード"
     observe = 4,
     //% block="たいきモード"
@@ -30,7 +28,6 @@ const eventNames = {
     0: "follow",
     1: "attack",
     2: "destroy",
-    3: "press",
     4: "observe",
     5: "idle",
 }
@@ -39,7 +36,6 @@ const stateNames = {
     0: "ついせきモード",
     1: "こうげきモード",
     2: "スポナーはかいモード",
-    3: "ボタンモード",
     4: "カメラモード",
     5: "たいきモード",
 }
