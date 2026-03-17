@@ -12,17 +12,23 @@
 // }
 
 enum AgentStates {
-    //% block="ついせきモード"
+    //% block="follow"
+    //% block.loc.ja="ついせきモード"
     follow = 0,
-    //% block="こうげきモード"
+    //% block="attack"
+    //% block.loc.ja="こうげきモード"
     attack = 1,
-    //% block="スポナーはかいモード"
+    //% block="destroy"
+    //% block.loc.ja="スポナーはかいモード"
     destroy = 2,
-    //% block="ダンスモード"
+    //% block="dance"
+    //% block.loc.ja="ダンスモード"
     dance = 3,
-    //% block="カメラモード"
+    //% block="observe"
+    //% block.loc.ja="カメラモード"
     observe = 4,
-    //% block="たいきモード"
+    //% block="idle"
+    //% block.loc.ja="たいきモード"
     idle = 5,
 }
 
@@ -55,8 +61,8 @@ namespace springMissions {
     /** 
      * @param state Agent State, eg: follow
      */
-    //% block="set Agent mode to"
-    //% block.loc.ja="エージェントをつぎのモードにする"
+    //% block="set Agent mode to $state"
+    //% block.loc.ja="エージェントをつぎのモードにする $state"
     export function setAgentModeTo(state: AgentStates):void {
         const eventKey: string = eventNames[state];
         const eventId: string = `edu:${eventKey}`;
