@@ -48,13 +48,16 @@ const stateNames = {
  * Custom blocks
  */
 
-//% block=agent
-namespace エージェント {
+//% block="Spring Missions"
+//% block.loc.ja="春の大脱出"
+//% color=12 weight=100
+namespace springMissions {
     /** 
      * @param state Agent State, eg: follow
      */
-    //% block
-    export function エージェントをつぎのモードにする(state: AgentStates):void {
+    //% block="set Agent mode to"
+    //% block.loc.ja="エージェントをつぎのモードにする"
+    export function setAgentModeTo(state: AgentStates):void {
         const eventKey: string = eventNames[state];
         const eventId: string = `edu:${eventKey}`;
         const modeName: string = stateNames[state];
