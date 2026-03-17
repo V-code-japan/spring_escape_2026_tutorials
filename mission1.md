@@ -51,6 +51,14 @@ player.onChat("fl", function() {
 - モードを**たいきモード**にする
 ```block
 player.onChat("id", function() {   
-    springMissions.setAgentModeTo(AgentStates.id);
+    springMissions.setAgentModeTo(AgentStates.idle);
 });
 ```
+## エージェントをとびらのまえまでうごかそう！
+これでエージェントがついてくるようになりました！
+右下の**▶**(じっこうボタン)をおして、したのようににゅうりょくしてみましょう。
+- **fl**: エージェントがプレイヤーのあとをついてくる
+- **id**: エージェントがそのばにとまる
+エージェントをとびらのまえまでうごかせたら、もういちど**C**をおして、この画面をひらきましょう。
+
+## エージェントをスイッチまでうごかす
