@@ -32,3 +32,25 @@ player.onChat("go", function() {
 このモードをつかって、**エージェントをとびらのまえまでうごかしましょう！**
 
 
+## プログラミングしよう
+- `||springMissions.春の大脱出||`から、`||springMissions.エージェントをつぎのモードにする||`をとりだす
+- `||player.チャットコマンド fl を入力(にゅうりょく)した時||`にはめこむ
+```block
+player.onChat("fl", function() {   
+    springMissions.setAgentModeTo(AgentStates.follow);
+});
+```
+
+## ついせきをとめる
+ついせきモードをやめるには、エージェントを**たいきモード**にします。
+チャットで**id**とにゅうりょくしたら、たいきモードになるようにプログラミングしましょう！
+
+## プログラミングしよう
+- `||springMissions.春の大脱出||`から、`||springMissions.エージェントをつぎのモードにする||`をとりだす
+- `||player.チャットコマンド fl を入力(にゅうりょく)した時||`にはめこむ
+- モードを**たいきモード**にする
+```block
+player.onChat("id", function() {   
+    springMissions.setAgentModeTo(AgentStates.id);
+});
+```
