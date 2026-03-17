@@ -48,7 +48,7 @@ const stateNames = {
  * Custom blocks
  */
 
-//% weight=100 color=#0fbc11 icon=""
+//% block=agent
 namespace エージェント {
     /** 
      * @param state Agent State, eg: follow
