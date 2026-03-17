@@ -54,10 +54,8 @@ const stateNames = {
  * Custom blocks
  */
 
-//% block="Spring Missions"
-//% block.loc.ja="春の大脱出"
-//% color=12 weight=100
-namespace springMissions {
+
+namespace agent {
     /** 
      * @param state Agent State, eg: follow
      */
